@@ -7,6 +7,47 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="lockScreen" style="
+position:fixed;
+inset:0;
+z-index:99999;
+background:#ffe6f0;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+font-family:Arial,sans-serif;
+">
+  <div>
+    <h1>💌 A Secret Surprise For You 💌</h1>
+    <p>This little surprise was made especially for you ❤️</p>
+
+    <input id="secretCode"
+      type="password"
+      placeholder="Enter the secret word"
+      style="padding:12px;border-radius:10px;border:1px solid #ccc;">
+
+    <button onclick="unlock()"
+      style="padding:12px 18px;border:0;border-radius:10px;margin-left:5px;cursor:pointer;">
+      Open My Surprise 💕
+    </button>
+
+    <p id="wrongCode" style="color:red;"></p>
+  </div>
+</div>
+
+<script>
+function unlock() {
+  const code = document.getElementById("secretCode").value;
+
+  if (code === "B&G2402") {
+    document.getElementById("lockScreen").style.display = "none";
+  } else {
+    document.getElementById("wrongCode").textContent =
+      "That's not the secret word ❤️";
+  }
+}
+</script>
 <div id="particles"></div>
 
 <section class="page opening" id="opening">
