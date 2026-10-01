@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Birthday Surprise ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="particles"></div>
+
+<section class="page opening" id="opening">
+  <div class="envelope" id="envelope" onclick="openEnvelope()">
+    <div class="envelope-flap"></div>
+    <div class="letter-card">💌</div>
+  </div>
+  <p class="small">Someone has a surprise for you...</p>
+  <h1>Open Me ❤️</h1>
+  <p class="sub">A little birthday story, made especially for <span class="name">My Love</span>.</p>
+  <button class="btn" onclick="openEnvelope()">Open Your Surprise</button>
+</section>
+
+<section class="page intro hidden" id="intro">
+  <p class="small">Today is a very special day</p>
+  <h2>Because <span class="name">My Love</span> was born. ✨</h2>
+  <p class="text">And someone who means so much to me deserves more than just a simple “Happy Birthday.”</p>
+  <button class="btn" onclick="go('cake')">I have something for you →</button>
+</section>
+
+<section class="page cake-page" id="cake">
+  <p class="small">Make a wish...</p>
+  <h2>Your Birthday Cake 🎂</h2>
+  <p class="text">Tap the candle flame.</p>
+  <div class="cake-stage">
+    <div class="flame" id="flame" onclick="blowCandle()">🔥</div>
+    <div class="candle" onclick="blowCandle()"></div>
+    <div class="cake">
+      <div class="icing"></div><i></i><i></i><i></i>
+      <span class="cherry">♥</span>
+    </div>
+    <div class="plate"></div>
+  </div>
+  <p id="wish" class="wish hidden">Wish made. Now let the birthday magic begin... ❤️</p>
+  <button class="btn" onclick="go('letter')">Next 💌</button>
+</section>
+
+<section class="page" id="letter">
+  <div class="glass">
+    <div class="heart">♥</div>
+    <p class="small">A letter from my heart</p>
+    <h2>To My Favorite Person</h2>
+    <p id="message" class="letter"></p>
+    <p class="sign">With all my love,<br><span id="sender">Your Name</span> ❤️</p>
+  </div>
+</section>
+
+<section class="page" id="memories">
+  <p class="small">Every picture has a story</p>
+  <h2>Our Little Memories 📸</h2>
+  <p class="text">Add your own pictures to the <b>photos</b> folder.</p>
+  <div class="gallery">
+    <img src="photos/photo1.jpg" alt="Memory 1" onerror="this.remove()">
+    <img src="photos/photo2.jpg" alt="Memory 2" onerror="this.remove()">
+    <img src="photos/photo3.jpg" alt="Memory 3" onerror="this.remove()">
+    <img src="photos/photo4.jpg" alt="Memory 4" onerror="this.remove()">
+    <img src="photos/photo5.jpg" alt="Memory 5" onerror="this.remove()">
+    <img src="photos/photo6.jpg" alt="Memory 6" onerror="this.remove()">
+  </div>
+  <button class="btn" onclick="go('final')">One last surprise →</button>
+</section>
+
+<section class="page final" id="final">
+  <div class="glass">
+    <div class="big-heart">♥</div>
+    <p class="small">And finally...</p>
+    <h2>Happy Birthday,<br><span class="name">My Love</span> ❤️</h2>
+    <p class="text">May your days be filled with laughter, your heart with peace, and your life with beautiful moments.</p>
+    <p class="text">And selfishly, I hope I get to be part of many of them.</p>
+    <button class="btn" onclick="celebrate()">Celebrate Again 🎉</button>
+  </div>
+</section>
+
+<div class="music"><button id="musicBtn" onclick="music()">🎵 Play Our Song</button>
+<audio id="audio" loop><source src="music/birthday-song.mp3" type="audio/mpeg"></audio></div>
+<script src="script.js"></script>
+</body>
+</html>
